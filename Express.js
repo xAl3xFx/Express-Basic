@@ -1,6 +1,5 @@
 const http = require('http');
 const pathToRegex = require('path-to-regex');
-const parser = new pathToRegex(':path*');
 
 
 function Express() {
@@ -54,11 +53,6 @@ Express.prototype.handleRequest = function(req, res) {
         }
     })
 };
-
-const nextMiddleware = (middlewares) => {
-    // return this.middlewares[this.middlewares.indexOf(s => s === middleware) + 1];
-
-}
 
 Express.prototype.getBody = function(req) {
     return new Promise((resolve, reject) => {
